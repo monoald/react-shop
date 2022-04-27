@@ -1,4 +1,4 @@
-import '../styles/RecoveryPassword.scss';
+import '../styles/PasswordRecovery.scss';
 import EmailIcon from '../assets/icons/email.svg';
 
 const RecoveryPassword = () => {

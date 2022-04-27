@@ -1,88 +1,92 @@
 @use './vars';
 
-nav {
+.header {
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
+  align-items: center;
+  padding: 0 60px;
+  height: 60px;
   border-bottom: 1px solid var(--very-light-pink);
 }
-
-.menu {
-  display: none;
+.header div {
+  height: 100%;
 }
-
-.logo {
-  width: 100px;
-}
-
-.navbar-left ul,
-.navbar-right ul {
+.header ul{
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
-  height: 60px;
 }
-
-.navbar-left {
-  display: flex;
-}
-
-.navbar-left ul {
-  margin-left: 12px;
-}
-
-.navbar-left ul li a,
-.navbar-right ul li a {
+.header ul li a {
   text-decoration: none;
   color: var(--very-light-pink);
   border: 1px solid var(--white);
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 12px;
 }
-
-.navbar-left ul li a:hover,
-.navbar-right ul li a:hover {
+.header ul li a:hover {
   border: 1px solid var(--hospital-green);
   color: var(--hospital-green);
 }
-
-.navbar-email {
-  color: var(--very-light-pink);
-  font-size: var(--sm);
-  margin-right: 12px;
+.menu {
+  display: none;
 }
-
+.logo {
+  width: 150px;
+}
+.navbar-left {
+  display: flex;
+  font-size: var(--md);
+  gap: 28px;
+}
+.navbar-left ul {
+  margin-left: 12px;
+  gap: 20px;
+}
+.navbar-email {
+  color: var(--black);
+  font-size: var(--sm);
+}
+.navbar-right {
+  display: flex;
+  justify-content: center;
+}
+.navbar-right ul{
+  gap: 48px;
+}
 .navbar-shopping-cart {
+  width: 28px;
+  height: 28px;
   position: relative;
 }
+.navbar-shopping-cart img{
+  width: 100%;
 
-.navbar-shopping-cart div {
+}
+.navbar-shopping-cart div{
   width: 16px;
   height: 16px;
   background-color: var(--hospital-green);
   border-radius: 50%;
-  font-size: var(--sm);
+  font-size: 12px;
   font-weight: bold;
+  text-align: center;
   position: absolute;
-  top: -6px;
-  right: -3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: -5px;
+  right: -5px;
 }
-
 @media (max-width: 640px) {
+  .header {
+      padding: 0 28px;
+  }
   .menu {
-    display: block;
+      display: block;
   }
-
   .navbar-left ul {
-    display: none;
+      display: none;
   }
-
   .navbar-email {
-    display: none;
+      display: none;
   }
 }
