@@ -26,12 +26,19 @@ module.exports = {
         }
       },
       {
-        test: /\.s?[ac]ss$/i,
+        test: /\.(css|scss)$/,
         use: [
           'style-loader',
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(png|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name].[ext]'
+        }
       }
     ]
   },

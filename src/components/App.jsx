@@ -1,9 +1,13 @@
-import React from 'react' // No need to import beacause of .babelrc config
-import '../styles/global.scss';
+// import React from 'react' // No need to import beacause of .babelrc config
+import Layout from '../containers/Layout';
+import Login from '../containers/Login';
+import '../styles/global.css';
 
 const App = () => {
   return (
-    <h1>Hola Mundo, Bienvenidos a mi Proyecto en React</h1>
+    <Layout>
+      <Login />
+    </Layout>
   )
 }
 
