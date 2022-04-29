@@ -4,5 +4,8 @@
     ["@babel/preset-react", {
       "runtime": "automatic" // No need to import react on the files
     }]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime"
   ]
 }

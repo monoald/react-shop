@@ -1,4 +1,5 @@
-import '../styles/ProductInfo.scss';
+import addToCart from  '@icons/bt_add_to_cart.svg';
+import '@styles/ProductInfo.scss';
 
 const ProductInfo = () => {
 	return (
@@ -9,7 +10,7 @@ const ProductInfo = () => {
 				<p>Bike</p>
 				<p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
 				<button className="primary-button add-to-cart-button">
-					<img src="./icons/bt_add_to_cart.svg" alt="add to cart" />
+					<img src={addToCart} alt="add to cart" />
 					Add to cart
 				</button>
 			</div>

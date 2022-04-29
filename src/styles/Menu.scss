@@ -3,14 +3,21 @@
 .Menu {
 	width: 100px;
 	height: auto;
+	max-height: 180px;
 	border: 1px solid var(--very-light-pink);
 	border-radius: 6px;
 	padding: 20px 20px 0 20px;
+	position: absolute;
+	top: 60px;
+	right: 50px;
+	background-color: white;
 }
 .Menu ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
 }
 .Menu ul li {
 	text-align: end;
@@ -29,6 +36,7 @@
 }
 .Menu ul li a {
 	color: var(--back);
+	font-size: var(--sm);
 	text-decoration: none;
 	margin-bottom: 20px;
 	display: inline-block;
