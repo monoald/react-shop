@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open",
+    "predeploy": "npm run build",
+    "deploy": "msg=`git show-branch --no-name HEAD` && gh-pages -b newDeploy -d dist -m '${msg}' ",
+    "start": "webpack serve",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -35,6 +37,7 @@
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "gh-pages": "^3.2.3",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
