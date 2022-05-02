@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
-    "deploy": "msg=`git show-branch --no-name HEAD` && gh-pages -b newDeploy -d dist -m '${msg}' ",
+    "deploy": "msg=`git show-branch --no-name HEAD` && gh-pages -b newDeploy -d dist -m ${msg} ",
     "start": "webpack serve",
     "build": "webpack --mode production"
   },

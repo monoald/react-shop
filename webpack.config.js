@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: './',
+    publicPath: '/',
   },
   mode: "development",
   module: {
@@ -54,6 +54,7 @@ module.exports = {
       '@icons': path.resolve(__dirname, 'src/assets/icons/'),
       '@hooks': path.resolve(__dirname, 'src/hooks/'),
       '@context': path.resolve(__dirname, 'src/context/'),
+      '@utils': path.resolve(__dirname, 'src/utils/'),
     }
   },
   devtool: 'source-map',

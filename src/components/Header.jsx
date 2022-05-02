@@ -12,50 +12,50 @@ const Header = () => {
   const [toggleOrders, setToggleOrders] = useState(false);
   const { state: {cart} } = useContext(AppContext);
 
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const handleToggle = (func, obj) => {
+    func(!obj);
   }
 
   return (
-    <nav className="header">
+    <header className="header">
       <img src={menuIcon} alt="menu" className="menu" />
-      <div className="navbar-left">
-        <img src={logo} alt="logo" className="nav-logo" />
-        <ul>
+      <div className="header__navbar navbar-left">
+        <img src={logo} alt="logo" className="header__logo" />
+        <ul className='list'>
           <li>
-            <a href="/">All</a>
+            <a className='list__item' href="/">All</a>
           </li>
           <li>
-            <a href="/">Clothes</a>
+            <a className='list__item' href="/">Clothes</a>
           </li>
           <li>
-            <a href="/">Electronics</a>
+            <a className='list__item' href="/">Electronics</a>
           </li>
           <li>
-            <a href="/">Furnitures</a>
+            <a className='list__item' href="/">Furnitures</a>
           </li>
           <li>
-            <a href="/">Toys</a>
+            <a className='list__item' href="/">Toys</a>
           </li>
           <li>
-            <a href="/">Others</a>
+            <a className='list__item' href="/">Others</a>
           </li>
         </ul>
       </div>
       <div className="navbar-right">
-        <ul>
-          <li className="navbar-email" onClick={handleToggle}>
+        <ul className='list'>
+          <li className="list__email" onClick={() => handleToggle(setToggle, toggle)}>
             platzi@example.com
           </li>
-          <li className="navbar-shopping-cart" onClick={() => setToggleOrders(!toggleOrders)}>
-            <img src={cartIcon} alt="shoping cart" />
-            {cart.length > 0 && <div>{cart.length}</div>}
+          <li className="shopping-cart" onClick={() => handleToggle(setToggleOrders, toggleOrders)}>
+            <img className='shopping-cart__icon' src={cartIcon} alt="shoping cart" />
+            {cart.length > 0 && <div className='shopping-cart__quantity'>{cart.length}</div>}
           </li>
         </ul>
       </div>
       {toggle && <Menu />}
       {toggleOrders && <MyOrder />}
-    </nav>
+    </header>
   );
 };
 

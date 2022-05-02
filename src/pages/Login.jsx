@@ -16,17 +16,17 @@ const Login = () => {
   }
   return (
     <div className="Login">
-			<div className="Login-container">
-				<img src={logo} alt="logo" className="logo" />
+			<div className="Login__container">
+				<img src={logo} alt="logo" className="Login__logo" />
 				<form action="/" className="form" ref={form}>
-					<label htmlFor="email" className="label">Email address</label>
-					<input type="text" name="email" placeholder="platzi@example.cm" className="input input-email" />
-					<label htmlFor="password" className="label">Password</label>
-					<input type="password" name="password" placeholder="*********" className="input input-password" />
-					<button onClick={handleSubmit}className="primary-button login-button">
+					<label htmlFor="email" className="Login__label">Email address</label>
+					<input type="text" name="email" placeholder="platzi@example.cm" className="Login__input input-email" />
+					<label htmlFor="password" className="Login__label">Password</label>
+					<input type="password" name="password" placeholder="*********" className="Login__input input-password" />
+					<button onClick={handleSubmit} className="primary-button Login__button">
             Log in
 					</button>
-					<a href="/">Forgot my password</a>
+					<a className='form__forgot-pswd' href="/">Forgot my password</a>
 				</form>
 				<button className="secondary-button signup-button">
 					Sign up

@@ -1,70 +1,72 @@
-@use './vars';
-
+//-----------------------------------HEADER------------------------------------------
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 60px;
+  padding: 0 28px;
   height: 60px;
   border-bottom: 1px solid var(--very-light-pink);
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
-.header div {
+.header__logo {
+  width: 150px;
+}
+.header__navbar {
   height: 100%;
 }
-.header ul{
+.list{
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.header ul li a {
+.list__item {
   text-decoration: none;
   color: var(--very-light-pink);
   border: 1px solid var(--white);
   padding: 8px;
   border-radius: 12px;
 }
-.header ul li a:hover {
+.list__item:hover {
   border: 1px solid var(--hospital-green);
   color: var(--hospital-green);
 }
 .menu {
   display: none;
 }
-.nav-logo {
-  width: 150px;
-}
+
+//-------------NAVBAR-LEFT----------
 .navbar-left {
   display: flex;
   font-size: var(--md);
   gap: 28px;
 }
-.navbar-left ul {
-  margin-left: 12px;
-  gap: 20px;
+//------------NAVBAR-RIGTH-----------
+.navbar-right {
+  width: 200px;
 }
-.navbar-email {
+.navbar-right .list{
+  display: flex;
+  justify-content: space-between;
+}
+.list__email {
   color: var(--black);
   font-size: var(--sm);
+  cursor: pointer;
 }
-.navbar-right {
-  display: flex;
-  justify-content: center;
-}
-.navbar-right ul{
-  gap: 48px;
-}
-.navbar-shopping-cart {
-  width: 28px;
-  height: 28px;
+.shopping-cart {
+  width: 24px;
+  height: 24px;
   position: relative;
+  cursor: pointer;
 }
-.navbar-shopping-cart img{
+.shopping-cart__icon{
   width: 100%;
-
+  object-fit: cover;
 }
-.navbar-shopping-cart div{
+.shopping-cart__quantity{
   width: 16px;
   height: 16px;
   background-color: var(--hospital-green);
@@ -83,10 +85,13 @@
   .menu {
       display: block;
   }
-  .navbar-left ul {
+  .navbar-left .list {
       display: none;
   }
-  .navbar-email {
+  .navbar-right {
+    width: auto;
+  }
+  .list__email {
       display: none;
   }
 }
