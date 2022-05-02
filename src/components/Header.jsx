@@ -1,15 +1,17 @@
 import { useState, useContext } from 'react';
+import AppContext from '@context/AppContext';
 import Menu from '@components/Menu';
 import MyOrder from '@containers/MyOrder';
+import MenuMobile from '@components/MenuMobile';
 import cartIcon from '@icons/icon_shopping_cart.svg';
 import menuIcon from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
-import AppContext from '@context/AppContext';
 import '@styles/Header.scss';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false);
+  const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
   const { state: {cart} } = useContext(AppContext);
 
   const handleToggle = (func, obj) => {
@@ -18,7 +20,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <img src={menuIcon} alt="menu" className="menu" />
+      <img src={menuIcon} alt="menu" className="menu" onClick={() => handleToggle(setToggleMenuMobile, toggleMenuMobile)} />
       <div className="header__navbar navbar-left">
         <img src={logo} alt="logo" className="header__logo" />
         <ul className='list'>
@@ -55,6 +57,7 @@ const Header = () => {
       </div>
       {toggle && <Menu />}
       {toggleOrders && <MyOrder />}
+      { toggleMenuMobile && <MenuMobile /> }
     </header>
   );
 };

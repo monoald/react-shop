@@ -16,20 +16,20 @@
 .header__navbar {
   height: 100%;
 }
-.list{
+.header__navbar .list{
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.list__item {
+.header__navbar .list__item {
   text-decoration: none;
   color: var(--very-light-pink);
   border: 1px solid var(--white);
   padding: 8px;
   border-radius: 12px;
 }
-.list__item:hover {
+.header__navbar .list__item:hover {
   border: 1px solid var(--hospital-green);
   color: var(--hospital-green);
 }
@@ -84,6 +84,7 @@
   }
   .menu {
       display: block;
+      cursor: pointer;
   }
   .navbar-left .list {
       display: none;
