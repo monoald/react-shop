@@ -13,7 +13,6 @@ const ProductItem = ({ product }) => {
 
 	const handleCart = (item) => {
 		isProductAdded() ? removeFromCart(item.id) : addToCart(item);
-		console.log(item);
 	}
 
 	

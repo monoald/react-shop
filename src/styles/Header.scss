@@ -50,6 +50,7 @@
 .navbar-right .list{
   display: flex;
   justify-content: space-between;
+  list-style: none;
 }
 .list__email {
   color: var(--black);
